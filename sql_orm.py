@@ -1,3 +1,5 @@
+""" sqlalchemy orm """
+
 from sqlalchemy import (
     create_engine, Column, Float, ForeignKey, Integer, String
 )
@@ -12,6 +14,7 @@ base = declarative_base()
 
 # create a class-based model for the "Artist" table
 class Artist(base):
+    """ artist table class """
     __tablename__ = "Artist"
     ArtistId = Column(Integer, primary_key=True)
     Name = Column(String)
